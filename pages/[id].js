@@ -13,11 +13,11 @@ export async function getStaticProps({ params }) {
 
     const personData = await getData(params.id);
 
-
     return {
         props: {
             personData
-        }
+        },
+        revalidate: 60
     };
 }
 
