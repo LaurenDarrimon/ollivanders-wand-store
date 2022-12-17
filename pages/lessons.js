@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout.js";
 
-import { getOrderedList } from "../lib/data";
+import { getOrderedList } from "../lib/lesson-data";
 import styles from "../styles/Home.module.css";
 
 export async function getStaticProps() {
@@ -27,7 +27,7 @@ export default function Home({ allPeople }) {
 
       <div className="list-group">
         {allPeople.map(({ id, name }) => (
-          <Link key={id} href={`/${id}`}>
+          <Link key={id} href={`lessons/${id}`}>
             <a className="list-group-item list-group-item-action"> {name} </a>
           </Link>
         ))}
