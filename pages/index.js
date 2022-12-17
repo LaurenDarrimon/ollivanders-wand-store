@@ -1,5 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
+import { Image, Row, Container, Col } from 'react-bootstrap'
+
 import Link from "next/link";
 import Layout from "../components/layout.js";
 
@@ -35,6 +35,8 @@ export default function Home({ allPeople }) {
           </Link>
         ))}
       </div>
+
+      
     </Layout>
   );
 }

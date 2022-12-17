@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Image, Row, Container, Col } from 'react-bootstrap'
+<Image src="O.png" alt="Ollivander Logo with celestial shapes"/> 
 
 
 export default function Layout({ children, home } ) {
@@ -16,7 +16,7 @@ export default function Layout({ children, home } ) {
                 </title>
             </Head>
          
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
                 <Navbar.Brand href="/">Ollivander&apos;s Wand Store</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -31,10 +31,17 @@ export default function Layout({ children, home } ) {
             </Navbar>
 
             <main>{children}</main>
+
+            <Row className="justify-content-md-center">
+                <Col xs={12} sm={6} md={6}>
+                <Image className="justify-content-md-center" fluid="true" src="/O.png" alt="Ollivander Logo with celestial shapes"/> 
+                </Col>
+            </Row>
             {!home && (
                 <Link href="/" className="btn btn-primary mt-3">Go to Home Page</Link>
                 )
             }
+            
         </div>
     );
 }
