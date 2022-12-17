@@ -1,10 +1,10 @@
-import Layout from '../components/layout.js';
+import Layout from '../../components/layout.js';
 import Link from 'next/link';
 
 
 
 //question for later - is "lib" naming Next.js convention or optional? 
-import { getPeopleIds, getData } from '../lib/data.js'
+import { getPeopleIds, getData } from '../../lib/data.js'
 
 
 //create getstaticprops to return all the data for one person
@@ -35,6 +35,7 @@ export async function getStaticPaths() {
 //make a compoenent that will display the persons details at the dynamic route 
 
 export default function Entry (  { personData } ){
+
 
     return (
         <Layout>

@@ -19,18 +19,11 @@ export async function getStaticProps() {
 export default function Home({ allPeople }) {
   return (
     <Layout home>
-      <h1 className={styles.title}>Ollivander&apos;s Fine Wands</h1>
-
-      <p className={styles.description}>
-        Mischief managed with Next.js and React using PHP and SQL to query a
-        WordpressDB
-      </p>
-
-      <h2>Wands for Sale:</h2>
+      <h1 className={styles.title}>Famous Wizards & their Wands</h1>
 
       <div className="list-group">
         {allPeople.map(({ id, name }) => (
-          <Link key={id} href={`products/${id}`}>
+          <Link key={id} href={`/${id}`}>
             <a className="list-group-item list-group-item-action"> {name} </a>
           </Link>
         ))}
